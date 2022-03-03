@@ -5,6 +5,7 @@ resource "zpa_browser_access" "browser_access_apps" {
   enabled          = true
   health_reporting = "ON_ACCESS"
   bypass_type      = "NEVER"
+  portal = true
   is_cname_enabled = true
   tcp_port_range {
         from = "80"
