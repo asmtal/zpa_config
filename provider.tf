@@ -1,10 +1,11 @@
 terraform {
-    required_providers {
-        zpa = {
-            version = "1.0.0"
-            source = "zscaler.com/zpa/zpa"
-        }
+  required_providers {
+    zpa = {
+      version = "2.0.6"
+      source  = "zscaler.com/zpa/zpa"
     }
+  }
+  required_version = ">= 0.13"
 }
 
 provider "zpa" {}
