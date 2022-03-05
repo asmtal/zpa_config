@@ -35,23 +35,6 @@ resource "zpa_server_group" "browser_access_apps" {
   }
 }
 
-resource "zpa_server_group" "sgio_devops_servers" {
-  name              = "SGIO DevOps Servers"
-  description       = "SGIO DevOps Servers"
-  enabled          = true
-  dynamic_discovery = true
-  // servers {
-  //   id = [
-  //     zpa_application_server.jenkins.id,
-  //     zpa_application_server.pan220.id,
-  //     zpa_application_server.zpa131.id,
-  //   ]
-  // }
-  app_connector_groups {
-    id = [zpa_app_connector_group.canada_app_connector_group.id]
-  }
-}
-
 resource "zpa_server_group" "sgio_intranet_web_apps" {
   name              = "SGIO Intranet Web Apps"
   description       = "SGIO Intranet Web Apps"

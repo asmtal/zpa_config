@@ -15,14 +15,6 @@ policy_migrated = true
   tcp_keep_alive_enabled = "1"
 }
 
-resource "zpa_segment_group" "sg_sgio_devops" {
-  name            = "SGIO DevOps Servers"
-  description     = "SGIO DevOps Servers"
-  enabled          = true
-policy_migrated = true
-  tcp_keep_alive_enabled = "1"
-}
-
 resource "zpa_segment_group" "sg_sgio_intranet_web_apps" {
   name            = "SGIO Intranet Web Apps"
   description     = "SGIO Intranet Web Apps"

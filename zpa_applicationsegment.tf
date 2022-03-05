@@ -16,22 +16,6 @@ resource "zpa_application_segment" "all_other_services" {
   }
 }
 
-resource "zpa_application_segment" "as_sgio_devops" {
-  name             = "SGIO DevOps Servers"
-  description      = "SGIO DevOps Servers"
-  enabled          = true
-  health_reporting = "ON_ACCESS"
-  bypass_type      = "NEVER"
-  icmp_access_type = "PING"
-  is_cname_enabled = true
-  tcp_port_ranges  = ["8080", "8080"]
-  domain_names     = ["jenkins.securitygeek.io"]
-  segment_group_id = zpa_segment_group.sg_sgio_devops.id
-  server_groups {
-    id = [zpa_server_group.sgio_devops_servers.id]
-  }
-}
-
 resource "zpa_application_segment" "as_vcenter_servers" {
   name             = "SGIO vCenter Servers"
   description      = "SGIO vCenter Servers"
